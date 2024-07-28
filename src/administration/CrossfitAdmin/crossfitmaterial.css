@@ -1,0 +1,35 @@
+.crossfitmaterialp{
+    display: flex;
+    /* height: 360px; */
+    /* width: 100%; */
+    align-items: center;
+    justify-items: center;
+}
+.childcrossfitmaterialp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150vh;
+    height: 350px;;
+}
+.descriptcrossfit {
+    display: flex;
+    align-items: start;
+    width: 400px;
+  }
+  .introduction_crossfit {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15%;
+    height: 213px;
+  }
+  .videonamecrossfit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.intro_spécialité{
+    font-size: 15px;
+}

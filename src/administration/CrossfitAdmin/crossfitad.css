@@ -1,0 +1,61 @@
+
+.judoadmin{
+    display: flex;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 50px;
+}
+.fff{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formjudoad{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.judo_sp{
+    height: 30px;
+    width: 500px;
+    background-color: black;
+    color: white;
+}
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.Eliad{
+    display: flex;
+    align-items: center;
+    color: red;
+    text-shadow: 2px 2px 3px black;
+    justify-content: center;
+    font-size: 300px;
+    font-weight: 400;
+    height: 200px;
+}
+.childdecorad{
+    width: 50%;
+}
+.parentdecorad{
+    /* width: 40%; */
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.allpagejudoad{
+    width: 100%;
+}

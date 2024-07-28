@@ -1,0 +1,21 @@
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+     /* Ajustez selon vos préférences */
+    align-items: flex-start;
+    width: 100%; /* Ajustez selon vos préférences */
+  }
+  
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* Ajoutez d'autres styles pour votre carte ici */
+  }
+  .lin:focus{
+    background-color: red;
+  }
+  
+  

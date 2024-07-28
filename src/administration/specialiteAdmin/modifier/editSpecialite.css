@@ -1,0 +1,130 @@
+.specialitematerialp{
+    display: flex;
+    height: 360px;
+    /* width: 100%; */
+    align-items: center;
+    justify-items: center;
+}
+.childspecialitematerialp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150vh;
+    height: 350px;;
+}
+/* .css-1atslg0-MuiTypography-root {
+    height: 70%;
+} */
+#xx{
+    height: 65%;
+    font-size: 15px;
+}
+.introduction_specialite{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 25%;
+    height: 213px;
+   
+}
+.videonamejud{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.intro_spécialité{
+    font-size: 15px;
+}
+.step-label {
+    font-size: 15px;
+  }
+  .descript{
+    display: flex;
+    align-items:start;
+    width: 300px;
+  }
+  .formparr{
+    display: flex;
+    height: 40%;
+    align-items: center;
+    justify-content: space-around;
+    gap: 13px;
+    width: 100%;
+  }
+  .titremod{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .formch{
+    display: flex;
+    /* width: 100%; */
+    flex-direction: column;
+    gap: 4px;
+
+  }
+  .editinp{
+    width: 400px;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    border-radius: 10px;
+    border: 1px red solid;
+    color: white;
+  }
+  .h2sp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .editinpdes{
+    max-width: 400px;
+    max-height: 80px;
+    min-height: 60px;
+    min-width: 400px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: red;
+    border-radius: 10px;
+    border: 1px red solid;
+
+  }
+
+  .fileload{
+    border: 1px solid white;
+    background-color: black;
+    width: 400px;
+    font-size: 15px;
+    height: 40px;
+    color: white;
+    border-radius: 10px;
+    border: 1px red solid;
+    /* height: 50px; */
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    /* padding: 6px 12px; */
+    cursor: pointer;
+  }
+  .Eliad{
+    display: flex;
+    align-items: center;
+    color: red;
+    text-shadow: 2px 2px 3px black;
+    justify-content: center;
+    font-size: 300px;
+    font-weight: 400;
+    height: 200px;
+}
+.childdecormod{
+    width: 50%;
+}
+.parentdecormod{
+    /* width: 40%; */
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

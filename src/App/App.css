@@ -1,0 +1,42 @@
+#elite {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    transition: all 1s ease;
+    letter-spacing: 4px;
+    opacity: 1;
+    z-index: 1000;
+    background-color: black;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #elite.hidden {
+    opacity: 0;
+    pointer-events: none;
+    font-size: 10rem;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  
+  .content {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .content.visible {
+    opacity: 1;
+  }
+  #eliteglitch{
+    @apply font-bold text-7xl
+  }
+  .hover-red-filter:hover {
+    filter: brightness(0) saturate(100%) invert(19%) sepia(96%) saturate(7467%) hue-rotate(355deg) brightness(90%) contrast(120%);
+  }
+  
+  
