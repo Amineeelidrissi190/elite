@@ -22,8 +22,8 @@ function Nav() {
                 <div className="mdn" id="ss">
                     <div className="grp">
                         <img src={roserouge} className="w-2/3" alt="Rose Rouge" />
-                        <p className="text-xs md:lg">WELCOME TO ELITE</p>
-                        <p className="md:text-xs text-sm text-center">THE DEEP BLACK BREATH</p>
+                        <p className="text-xs">WELCOME TO ELITE</p>
+                        <p className="text-xs text-center">THE DEEP BLACK BREATH</p>
                     </div>
                 </div>
                 {token && user.role === "client"?
