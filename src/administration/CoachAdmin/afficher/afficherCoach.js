@@ -1,17 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import deleteicon from "../../../fitness/deleteicon.png";
-import editic from "../../../fitness/editic.png";
-
 export default function AfficherCoach() {
     const [datacoach, setDatacoach] = useState([]);
-    const navigate = useNavigate();
     const token = localStorage.getItem('token');
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-
     useEffect(() => {
         fetchCoaches();
     }, []);

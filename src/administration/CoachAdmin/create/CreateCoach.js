@@ -11,10 +11,8 @@ export default function CreateCoach() {
   const [description, setDescription] = useState('');
   const [email, setemail] = useState('');
   const [password, setpassword] = useState('');
-  const [role, setrole] = useState('coach');
+  const role = 'coach';
   const [errors, setErrors] = useState({});
-
-
   const EnregistrerCoach = async (e) => {
     e.preventDefault();
     try {
