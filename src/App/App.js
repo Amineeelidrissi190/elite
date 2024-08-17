@@ -70,10 +70,14 @@ import OffresHomeAdmin from "../administration/offresHomeAdmin/OffresHomeAdmin";
 import PtrainiesHomeAdmin from "../administration/ptrainiesHomeAdmin/PtrainiesHomeAdmin";
 import ConnectedUsers from "../administration/connectedusers/Connectedusers";
 import jwtDecode from 'jwt-decode';
+import Gallery from "../Gallery/Gallery";
 import Swal from 'sweetalert2';
 import EditProfil from "../administration/profil/EditProfil";
 import down from "../fitness/down.svg";
 import "./App.css";
+import AfficherGallerie from "../administration/Gallerie/AfficherGallerie/AfficherGallerie";
+import AddGalerie from "../administration/Gallerie/add/AddGalerie";
+import EditGalerie from "../administration/Gallerie/Edit/EditGalerie";
 
 function App() {
   const [sticky, setSticky] = useState(false);
@@ -206,6 +210,11 @@ function App() {
               <Route path="/Affichercommand" element={<Affichercommand />} />
               <Route path="/ProductHomeAdmin" element={<ProductHomeAdmin />} />
               <Route path="/profil" element={<Profil />} />
+              <Route path="/AfficherGallerie" element={<AfficherGallerie />} />
+              <Route path="/AddGalerie" element={<AddGalerie />} />
+              <Route path="/EditGalerie/:id" element={<EditGalerie />} />
+
+
             </Routes>
           </nav>
         ) : (
@@ -245,6 +254,7 @@ function App() {
                   <Route path="/takewando" element={<Takewando />} />
                   <Route path="/crossfit" element={<Crossfit />} />
                   <Route path="/fitness" element={<Fitness />} />
+                  <Route path="/gallery" element={<Gallery />} />
                   <Route path="/events" element={<Events />} />
                   <Route path="/DetailEvent/:id_event" element={<DetailEvent />} />
                   <Route path="/product" element={<Product />} />

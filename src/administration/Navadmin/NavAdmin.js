@@ -19,6 +19,7 @@ import adminco from '../../fitness/adminco.png';
 import packageorder from '../../fitness/packageorder.png';
 import adduser from '../../fitness/adduser.png';
 import signupevent from "../../fitness/signupevent.png"
+import galerieimg from "../../fitness/galerieimg.png"
 import us from "../../fitness/us.png"
 function NavAdmin(props) {
   const token = localStorage.getItem('token');
@@ -59,6 +60,13 @@ function NavAdmin(props) {
               <p className="hover:text-red-700 text-sm rounded-full">Home</p>
             </NavLink>
           </li>
+
+          <li><NavLink to="/AfficherGallerie" className="focus:bg-slate-900 rounded-lg p-1 flex items-center space-x-3">
+              <img src={galerieimg} alt="galerieimg" />
+              <p className="hover:text-red-700 text-sm">Gallery</p>
+            </NavLink>
+          </li>
+
           <li>
             <NavLink to="/profil" className="flex items-center focus:bg-slate-900 rounded-lg p-1 space-x-3">
               <img src={us} />

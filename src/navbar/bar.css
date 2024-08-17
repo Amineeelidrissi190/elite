@@ -1,3 +1,8 @@
 .active{
     color: #C53030;
   }
+  .sweetalert-custom {
+    padding-left: 0.3rem; /* Équivaut à p-2 pour la gauche */
+    padding-right: 0.3rem;
+    /* border: #C53030 1px solid; Équivaut à p-2 pour la droite */
+}

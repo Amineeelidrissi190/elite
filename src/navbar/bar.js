@@ -42,6 +42,7 @@ function Bar({ sticky, logout }) {
         </Link>
         <div className="hidden md:flex items-center">
           <ul className="flex justify-between items-center space-x-6">
+            <li><NavLink to="/gallery" className="text-white font-bold text-base hover:text-red-700">Gallery</NavLink></li>
             <li><NavLink to="/events" className="text-white font-bold text-base hover:text-red-700">Events</NavLink></li>
             <li><NavLink to="/product" className="text-white font-bold text-base hover:text-red-700">Products</NavLink></li>
             <li><NavLink to="/trainies" className="text-white font-bold text-base hover:text-red-700">Workout-sessions</NavLink></li>
