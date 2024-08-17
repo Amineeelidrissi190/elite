@@ -83,6 +83,7 @@ function Bar({ sticky, logout }) {
             <li><NavLink to="/trainies" className="font-bold text-base text-white hover:text-red-700">Workout-sessions</NavLink></li>
             <li><NavLink to="/offres" className="font-bold text-base text-white hover:text-red-700">Offres</NavLink></li>
             <li><NavLink to="/specialite" className="font-bold text-base text-white hover:text-red-700">Specialities</NavLink></li>
+            <li><NavLink to="/gallery" className="font-bold text-base text-white hover:text-red-700">Gallery</NavLink></li>
             {token && user && user.role === "client" ? (
               <form method="post">
                 <input type="submit" onClick={handleLogout} className="flex bg-red-700 text-white px-6 py-2 rounded-2xl hover:text-black hover:bg-white list-none" value="Logout" />
