@@ -59,7 +59,9 @@ export default function AfficherGallerie() {
     };
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <div className="flex items-center justify-center w-full ">
+            <div data-glitch="Loading..." className="glitch text-white text-3xl">Loading...</div>
+        </div>;
     }
 
     return (
