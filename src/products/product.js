@@ -59,10 +59,10 @@ function Product() {
 
     return (
         <ScrollAnimation>
-            <div className="w-full relative h-screen flex items-center justify-center">
-                <img src={prback} className='w-full h-full'/>
-                <div className="absolute items-center justify-center flex w-5/6 h-3/4 bg-black border border-red-700 rounded-lg bg-opacity-75 space-x-2 ">
-                    <div className='w-full flex-col items-center justify-center'>
+            <div  className="w-full relative h-screen flex items-center id='prdgene' justify-center" >
+                <img src={prback} className='w-full h-full' />
+                <div  className="absolute items-center justify-center flex md:w-5/6 w-full px-6  h-3/4 bg-black border border-red-700 rounded-lg bg-opacity-75 space-x-2 ">
+                    <div className='flex-col items-center justify-center'>
                         {loading ? (
                             <div className="loader flex items-center justify-center h-full">
                                 <div data-glitch="Loading..." className="glitch">Loading...</div>

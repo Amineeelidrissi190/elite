@@ -4,6 +4,7 @@ import React from 'react';
 import logo from "./logo.png";
 import axios from "axios";
 import "./bar.css";
+import Elite2rem from "../fitness/Elite2rem.png"
 import ScrollAnimation from "../ScrollAnimation";
 
 function Bar({ sticky, logout }) {
@@ -38,9 +39,9 @@ function Bar({ sticky, logout }) {
     <ScrollAnimation>
       <div className={`center-content ${sticky ? "bg-black" : ""} flex justify-around items-center z-50`}>
         <Link to="/">
-          <img src={logo} alt="logo" className="md:w-full w-28" />
+          <img src={Elite2rem} alt="logo" className="md:w-44 w-28 custome-shadow md:p-1 p-2" />
         </Link>
-        <div className="hidden md:flex items-center">
+        <div className="hidden md:flex items-center ">
           <ul className="flex justify-between items-center space-x-6">
             <li><NavLink to="/gallery" className="text-white font-bold text-base hover:text-red-700">Gallery</NavLink></li>
             <li><NavLink to="/events" className="text-white font-bold text-base hover:text-red-700">Events</NavLink></li>

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import Swal from "sweetalert2";
 export default function CreateCoach() {
   const navigate = useNavigate();
   const [nomCoach, setNomCoach] = useState('');
@@ -32,7 +32,13 @@ export default function CreateCoach() {
       if (res.data.errors) {
         setErrors(res.data.errors);
       } else {
-        navigate("/");
+        navigate("/AfficherCoach");
+        Swal.fire({
+          icon: 'success',
+          title: 'Success',
+          text: res.data.message,
+          showConfirmButton: true,
+        });
       }
     } catch (error) {
       if (error.response && error.response.data.errors) {

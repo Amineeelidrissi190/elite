@@ -1,9 +1,10 @@
-import logo from "./logo.png";
+import Elite2rem from "../fitness/Elite2rem.png";
 function Contact(){
     return <div className="w-full max-w-screen-xl mx-auto p-4 ">
     <div className="sm:flex sm:items-center sm:justify-between ">
       <a href="#nav" className="flex items-center mb-4 sm:mb-0">
-        <img src={logo} className="" alt="ELITE" />
+         <img src={Elite2rem} alt="logo" className="md:w-44 w-28" />
+
       </a>
       <div className="loader">
       <div id="joincom" data-glitch="Join our community" className="glitch font-bold text-4xl cursor-pointer" onClick={()=>{

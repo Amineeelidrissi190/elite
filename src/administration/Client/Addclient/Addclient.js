@@ -49,9 +49,9 @@ export default function Addclient() {
 
   return (
     <div className="w-full md:mx-4 mx-0">
-      <form onSubmit={postdata} className="flex flex-col items-center justify-center w-full p-2 space-y-3 rounded-lg">
+      <form onSubmit={postdata} className="flex flex-col items-center justify-center w-full py-2 space-y-2 rounded-lg">
         <div className="bg-slate-950 w-full flex items-center justify-between px-5 py-3 rounded-lg">
-          <h1 className="text-lg">Clients</h1>
+          <h1 className="text-sm">Clients</h1>
             <input type="submit" value="Add" className="text-green-600 hover:underline cursor-pointer py-2" />
             
     

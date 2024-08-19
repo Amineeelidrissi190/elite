@@ -15,7 +15,7 @@ export const Productp = ({ product, loading }) => {
     }
 
     return (
-        <ul className='flex items-center justify-center space-y-1 w-full space-x-2'>
+        <ul  className='flex items-center  justify-center space-y-1 w-full space-x-2'>
             {product.map((e, ind) => (
                 <li key={ind} className="flex flex-col bg-gradient-to-b from-red-700 via-transparent to-white w-60 p-3 space-y-1 rounded-xl product-card">
                     <div className="product-image">

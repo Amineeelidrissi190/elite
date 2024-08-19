@@ -78,7 +78,7 @@ import "./App.css";
 import AfficherGallerie from "../administration/Gallerie/AfficherGallerie/AfficherGallerie";
 import AddGalerie from "../administration/Gallerie/add/AddGalerie";
 import EditGalerie from "../administration/Gallerie/Edit/EditGalerie";
-
+import Elite2rem from "../fitness/Elite2rem.png"
 function App() {
   const [sticky, setSticky] = useState(false);
   const [user, setUser] = useState(null); // null instead of empty string
@@ -176,6 +176,7 @@ function App() {
               <Route path="/CreateTrainies" element={<CreateTrainies />} />
               <Route path="/UpdateTrainies/:id_trainies" element={<UpdateTrainies />} />
               <Route path="/AfficherTrainiesAdmin" element={<AfficherTrainiesAdmin />} />
+              <Route path="/Addclient" element={<Addclient/>} />
               <Route path="/EventAdminHome" element={<EventAdminHome />} />
               <Route path="/Deleteinsoffer/:id" element={<Deleteinsoffer />} />
               <Route path="/Deleteinscription_event/:id_eventpivot" element={<Deleteinscription_event />} />
@@ -223,7 +224,8 @@ function App() {
               <div className="loader">
                 <div className="flex flex-col items-center justify-center">
                   <div className="flex flex-col h-96 items-center justify-center">
-                    <div id='eliteglitch' data-glitch="ELITE" className="glitch">ELITE</div>
+                    {/* <div id='eliteglitch' data-glitch="ELITE" className="glitch">ELITE</div> */}
+                    <img src={Elite2rem} alt="logo" className="w-56 custome-shadow p-1 glitch" id='eliteglitch' data-glitch="ELITE"/>
                     <div id='' data-glitch="The deep black breath" className="glitch">The deep black breath</div>
                   </div>
                   <div className="flex items-center space-y-7 justify-center flex-col">

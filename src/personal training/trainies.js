@@ -58,7 +58,7 @@ function Trainies() {
     setcurrentPage(pageNumber)
   }
   return <ScrollAnimation>
-    <div className="w-full  relative h-screen flex items-center justify-center">
+    <div className="w-full id='#ptraining' relative h-screen flex items-center justify-center">
       <img src={workoutboxing} className="w-full h-full" />
       <div className="absolute md:w-5/6 w-11/12 h-3/4 rounded-lg bg-black bg-opacity-70 border border-red-700 flex items-center flex-col px-3 space-x-2 justify-center">
         {loading ? (
