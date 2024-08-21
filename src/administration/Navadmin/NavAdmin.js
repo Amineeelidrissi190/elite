@@ -21,6 +21,7 @@ import adduser from '../../fitness/adduser.png';
 import signupevent from "../../fitness/signupevent.png"
 import galerieimg from "../../fitness/galerieimg.png"
 import us from "../../fitness/us.png"
+import Elite2rem from "../../fitness/Elite2rem.png"
 function NavAdmin(props) {
   const token = localStorage.getItem('token');
   const user = JSON.parse(localStorage.getItem("user"));
@@ -47,7 +48,7 @@ function NavAdmin(props) {
     <div className=" overflow-hidden w-80 bg-slate-950  border-r border-slate-900 flex flex-col space-y-2 min-h-screen ">
       <div className="w-full py-1 flex justify-center items-center">
       <Link to="/" className='flex justify-center items-center'>
-        <img src={logo} alt="Logo" />
+        <img src={Elite2rem} alt="Logo" className='w-36' />
       </Link>
       </div>
       <div className='w-full mx-3 flex flex-col items-center justify-center'>

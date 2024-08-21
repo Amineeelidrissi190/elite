@@ -1,9 +1,9 @@
 import { Link, useNavigate, NavLink } from "react-router-dom";
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import React from 'react';
-import logo from "./logo.png";
 import axios from "axios";
 import "./bar.css";
+import paneauredshop from '../fitness/paneauredshop.png'
 import Elite2rem from "../fitness/Elite2rem.png"
 import ScrollAnimation from "../ScrollAnimation";
 
@@ -11,15 +11,12 @@ function Bar({ sticky, logout }) {
   const token = localStorage.getItem("token");
   const user = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
-
-  // Set authorization header if token exists
+  const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
   if (token) {
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
   }
-
   const handleMobileButtonClick = () => {
-    const mobileMenu = document.querySelector("#mobilemenu");
-    mobileMenu.classList.toggle('hidden');
+    setIsMobileMenuVisible(!isMobileMenuVisible);
   };
 
   const handleLogout = async (e) => {
@@ -35,6 +32,28 @@ function Bar({ sticky, logout }) {
     }
   };
 
+  const handleClickOutside = (e) => {
+    const mobileMenu = document.querySelector("#mobilemenu");
+    if (mobileMenu && !mobileMenu.contains(e.target) && !e.target.closest("#mobilebtn")) {
+      setIsMobileMenuVisible(false);
+    }
+  };
+
+  const handleLinkClick = () => {
+    setIsMobileMenuVisible(false);
+  };
+
+  useEffect(() => {
+    if (isMobileMenuVisible) {
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isMobileMenuVisible]);
+
   return (
     <ScrollAnimation>
       <div className={`center-content ${sticky ? "bg-black" : ""} flex justify-around items-center z-50`}>
@@ -46,7 +65,7 @@ function Bar({ sticky, logout }) {
             <li><NavLink to="/gallery" className="text-white font-bold text-base hover:text-red-700">Gallery</NavLink></li>
             <li><NavLink to="/events" className="text-white font-bold text-base hover:text-red-700">Events</NavLink></li>
             <li><NavLink to="/product" className="text-white font-bold text-base hover:text-red-700">Products</NavLink></li>
-            <li><NavLink to="/trainies" className="text-white font-bold text-base hover:text-red-700">Workout-sessions</NavLink></li>
+            <li><NavLink to="/trainies" className="text-white font-bold text-base hover:text-red-700">Personal training</NavLink></li>
             <li><NavLink to="/offres" className="text-white font-bold text-base hover:text-red-700">Offres</NavLink></li>
             <li><NavLink to="/specialite" className="text-white font-bold text-base hover:text-red-700">Specialities</NavLink></li>
           </ul>
@@ -56,9 +75,12 @@ function Bar({ sticky, logout }) {
             <input type="submit" onClick={handleLogout} className="hidden md:flex bg-red-700 text-white px-6 py-2 rounded-2xl hover:text-black hover:bg-white list-none" value="Logout" />
           </form>
         ) : (
-          <Link to="/Login">
-            <li className="hidden md:flex bg-red-700 text-white px-6 py-2 rounded-2xl hover:text-black hover:bg-white list-none">Login</li>
-          </Link>
+          <div className="flex items-center justify-center space-x-5">
+            <img src={paneauredshop} alt="shop" className="cursor-pointer" title="try to connect on your acount"/>
+            <Link to="/Login">
+              <li className="hidden md:flex bg-red-700 text-white px-6 py-2 rounded-2xl hover:text-black hover:bg-white list-none">Login</li>
+            </Link>
+          </div>
         )}
 
         <div className="md:hidden w-1/2 flex items-center justify-end">
@@ -77,20 +99,20 @@ function Bar({ sticky, logout }) {
         <div className="md:hidden">
           <div
             id="mobilemenu"
-            className="absolute flex hidden p-4 flex-col items-center space-y-4 top-14 drop-shadow-lg border border-gray-300 bg-black rounded-xl list-none left-4 right-4"
+            className={`absolute flex ${isMobileMenuVisible ? '' : 'hidden'} p-4 flex-col items-center space-y-4 top-14 drop-shadow-lg border border-gray-300 bg-black rounded-xl list-none left-4 right-4`}
           >
-            <li><NavLink to="/events" className="font-bold text-base text-white hover:text-red-700">Events</NavLink></li>
-            <li><NavLink to="/product" className="font-bold text-base text-white hover:text-red-700">Products</NavLink></li>
-            <li><NavLink to="/trainies" className="font-bold text-base text-white hover:text-red-700">Workout-sessions</NavLink></li>
-            <li><NavLink to="/offres" className="font-bold text-base text-white hover:text-red-700">Offres</NavLink></li>
-            <li><NavLink to="/specialite" className="font-bold text-base text-white hover:text-red-700">Specialities</NavLink></li>
-            <li><NavLink to="/gallery" className="font-bold text-base text-white hover:text-red-700">Gallery</NavLink></li>
+            <li><NavLink to="/events" className="font-bold text-base text-white hover:text-red-700" onClick={handleLinkClick}>Events</NavLink></li>
+            <li><NavLink to="/product" className="font-bold text-base text-white hover:text-red-700" onClick={handleLinkClick}>Products</NavLink></li>
+            <li><NavLink to="/trainies" className="font-bold text-base text-white hover:text-red-700" onClick={handleLinkClick}>Workout-sessions</NavLink></li>
+            <li><NavLink to="/offres" className="font-bold text-base text-white hover:text-red-700" onClick={handleLinkClick}>Offres</NavLink></li>
+            <li><NavLink to="/specialite" className="font-bold text-base text-white hover:text-red-700" onClick={handleLinkClick}>Specialities</NavLink></li>
+            <li><NavLink to="/gallery" className="font-bold text-base text-white hover:text-red-700" onClick={handleLinkClick}>Gallery</NavLink></li>
             {token && user && user.role === "client" ? (
-              <form method="post">
-                <input type="submit" onClick={handleLogout} className="flex bg-red-700 text-white px-6 py-2 rounded-2xl hover:text-black hover:bg-white list-none" value="Logout" />
+              <form method="post" onClick={handleLinkClick}>
+                <input type="submit" onClick={handleLogout} className="flex bg-red-700 text-white px-6 py-2 rounded-2xl hover:text-black hover:bg-white list-none" value="Logout"  />
               </form>
             ) : (
-              <Link to="/Login">
+              <Link to="/Login" onClick={handleLinkClick}>
                 <li className="md:flex bg-red-700 text-white px-6 py-2 rounded-2xl hover:text-black hover:bg-white list-none">Login</li>
               </Link>
             )}

@@ -136,7 +136,8 @@ function App() {
       localStorage.removeItem("token");
       localStorage.removeItem("user");
       setUser(null);
-      window.location.href = '/login';
+      // window.location.href = '/login';
+      navigate("/")
     } catch (error) {
       console.error("Erreur de déconnexion : ", error);
       localStorage.removeItem("token");
