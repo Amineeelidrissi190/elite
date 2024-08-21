@@ -79,8 +79,11 @@ import AfficherGallerie from "../administration/Gallerie/AfficherGallerie/Affich
 import AddGalerie from "../administration/Gallerie/add/AddGalerie";
 import EditGalerie from "../administration/Gallerie/Edit/EditGalerie";
 import Elite2rem from "../fitness/Elite2rem.png"
+
+
 function App() {
   const [sticky, setSticky] = useState(false);
+
   const [user, setUser] = useState(null); // null instead of empty string
   const [eliteClass, setEliteClass] = useState('');
   const [isEliteHidden, setIsEliteHidden] = useState(false);
@@ -136,8 +139,8 @@ function App() {
       localStorage.removeItem("token");
       localStorage.removeItem("user");
       setUser(null);
-      // window.location.href = '/login';
-      navigate("/")
+      window.location.href = '/login';
+      // navigate("/")
     } catch (error) {
       console.error("Erreur de déconnexion : ", error);
       localStorage.removeItem("token");
