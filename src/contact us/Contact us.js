@@ -13,21 +13,21 @@ function Contact() {
   }
   return <div className="w-full max-w-screen-xl mx-auto p-4 ">
     <div className="sm:flex sm:items-center sm:justify-between ">
-      <a href="#nav" className="flex items-center mb-4 sm:mb-0">
+      <a href="#nav" className="flex items-center">
         <img src={Elite2rem} alt="logo" className="md:w-44 w-28" />
 
       </a>
       <div className="">
         <div
           id="joincom"
-          className="text-white text-center font-bold text-sm border border-red-700 p-2 rounded-lg cursor-pointer bg-black hover:bg-red-700 hover:text-black hover:border-black transition-colors duration-300 ease-in-out"
+          className="text-white text-center md:mb-0 mb-2 font-bold text-sm border border-red-700 p-2 rounded-lg cursor-pointer bg-black hover:bg-red-700 hover:text-black hover:border-black transition-colors duration-300 ease-in-out"
           onClick={handle}
         >
           Join our community
         </div>
 
       </div>
-      <ul className="flex flex-wrap items-center mb-6 text-sm font-medium space-x-3 text-white sm:mb-0">
+      <ul className="flex flex-wrap md:w-fit w-full md:justify-start justify-center items-center mb-2 text-sm font-medium space-x-3 text-white sm:mb-0">
         <li>
           <a href="https://www.instagram.com/elitefitmaroc/" target="_blank" className="hover:underline hover:text-red-700">instagram</a>
         </li>
