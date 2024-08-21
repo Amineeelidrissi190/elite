@@ -20,7 +20,7 @@ function Contact() {
       <div className="">
         <div
           id="joincom"
-          className="text-white font-bold text-sm border border-red-700 p-2 rounded-lg cursor-pointer bg-black hover:bg-red-700 hover:text-black hover:border-black transition-colors duration-300 ease-in-out"
+          className="text-white text-center font-bold text-sm border border-red-700 p-2 rounded-lg cursor-pointer bg-black hover:bg-red-700 hover:text-black hover:border-black transition-colors duration-300 ease-in-out"
           onClick={handle}
         >
           Join our community
