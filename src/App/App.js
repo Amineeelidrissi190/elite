@@ -71,7 +71,7 @@ import PtrainiesHomeAdmin from "../administration/ptrainiesHomeAdmin/PtrainiesHo
 import ConnectedUsers from "../administration/connectedusers/Connectedusers";
 import jwtDecode from 'jwt-decode';
 import Gallery from "../Gallery/Gallery";
-import Swal from 'sweetalert2';
+// import Swal from 'sweetalert2';
 import EditProfil from "../administration/profil/EditProfil";
 import down from "../fitness/down.svg";
 import "./App.css";
@@ -79,7 +79,10 @@ import AfficherGallerie from "../administration/Gallerie/AfficherGallerie/Affich
 import AddGalerie from "../administration/Gallerie/add/AddGalerie";
 import EditGalerie from "../administration/Gallerie/Edit/EditGalerie";
 import Elite2rem from "../fitness/Elite2rem.png"
-
+import Panier from "../panier/panier";
+import ReservationsPanier from "../panier/ReservationsPanier";
+import OffersPanier from "../panier/OffersPanier";
+import EventsPanier from "../panier/EventsPanier";
 
 function App() {
   const [sticky, setSticky] = useState(false);
@@ -269,6 +272,10 @@ function App() {
                   <Route path="/Login" element={<Login setData={setUser} />} />
                   <Route path="/specialite" element={<Specialite />} />
                   <Route path="/*" element={<Pageerror />} />
+                  <Route path="/Panier" element={<Panier />} />
+                  <Route path="/ReservationsPanier" element={<ReservationsPanier />} />
+                  <Route path="/OffersPanier" element={<OffersPanier />} />
+                  <Route path="/EventsPanier" element={<EventsPanier />} />
                 </Routes>
               </nav>
               <article className="text-white overflow-hidden bg-black w-full min-h-fit">

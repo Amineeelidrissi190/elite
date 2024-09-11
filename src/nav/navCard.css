@@ -1,62 +1,22 @@
-@keyframes card-animation {
-    0% {
-      opacity: 0;
-      transform: rotateZ(0deg);
-    }
-    50% {
-        opacity: 0.5;
-        left: 50%;
-      transform: rotateZ(30deg);
-    }
-    80% {
-      opacity: 1;
-      transform: rotateZ(0deg);
-      left: 40%;
-      top: 65%;
-    }
-    100% {
-      opacity: 1;
-      transform: rotateZ(0deg);
-      left: 44%;
-      top: 65%;
-      
-    }
-  }
+
   .grp{
     z-index: 1;
     position: absolute;
     display: flex;
     flex-direction: column;
-    width: 10rem; /* Adjust the width */
-    height: 12rem;
     align-items: center;
-    border: 1px white solid;
+    top: 65%;
+    left: 40%;
+    /* border: 1px white solid; */
     border-radius: 5px;
     justify-content: center;
     transition: 0.5s;
     
     
   }
-  .grp:hover{
-    transform: rotateZ(720deg);
-    background-color: #b91c1c;
-    box-shadow: 0 0 1px 5px #b91c1c;
 
-  }
   .lien:hover{
     transform: scale(1.2);
-
-  }
-  .mdn{
-    /* box-shadow: 0 0 1px 1px #b91c1c; */
-    z-index: 1;
-    left: 90%;
-    top: 10%;
-    animation: card-animation 7s forwards;
-    transition: 0.5s;
-    width: 10rem; 
-    height: 12rem; 
-    @apply hidden md:absolute bg-black  md:flex flex-col items-center justify-center rounded-lg 
 
   }
 

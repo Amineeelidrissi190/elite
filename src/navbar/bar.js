@@ -71,12 +71,18 @@ function Bar({ sticky, logout }) {
           </ul>
         </div>
         {token && user && user.role === "client" ? (
-          <form method="post">
-            <input type="submit" onClick={handleLogout} className="hidden md:flex bg-red-700 text-white px-6 py-2 rounded-2xl hover:text-black hover:bg-white list-none" value="Logout" />
-          </form>
-        ) : (
           <div className="flex items-center justify-center space-x-5">
-            <img src={paneauredshop} alt="shop" className="cursor-pointer" title="try to connect on your acount"/>
+            <Link to="/Panier">
+              <img src={paneauredshop} alt="shop" className="cursor-pointer" />
+            </Link>
+            <form method="post">
+              <input type="submit" onClick={handleLogout} className="hidden md:flex bg-red-700 text-white px-6 py-2 rounded-2xl hover:text-black hover:bg-white list-none" value="Logout" />
+            </form>
+
+          </div>
+        ) : (
+          <div className="">
+
             <Link to="/Login">
               <li className="hidden md:flex bg-red-700 text-white px-6 py-2 rounded-2xl hover:text-black hover:bg-white list-none">Login</li>
             </Link>
@@ -109,7 +115,7 @@ function Bar({ sticky, logout }) {
             <li><NavLink to="/gallery" className="font-bold text-base text-white hover:text-red-700" onClick={handleLinkClick}>Gallery</NavLink></li>
             {token && user && user.role === "client" ? (
               <form method="post" onClick={handleLinkClick}>
-                <input type="submit" onClick={handleLogout} className="flex bg-red-700 text-white px-6 py-2 rounded-2xl hover:text-black hover:bg-white list-none" value="Logout"  />
+                <input type="submit" onClick={handleLogout} className="flex bg-red-700 text-white px-6 py-2 rounded-2xl hover:text-black hover:bg-white list-none" value="Logout" />
               </form>
             ) : (
               <Link to="/Login" onClick={handleLinkClick}>

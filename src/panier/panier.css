@@ -1,0 +1,19 @@
+select {
+    background-color: transparent;
+    color: white;
+  }
+  
+  select option {
+    background-color: transparent;
+    color: white;
+  }
+  
+  /* Pour cibler l'apparence de la liste déroulante */
+  select:focus {
+    background-color: transparent;
+  }
+  
+  select:focus option {
+    background-color: rgba(0, 0, 0, 0.6); /* Ajuste la transparence ici */
+  }
+  

@@ -114,8 +114,8 @@ export default function Login(props) {
   return (
     <ScrollAnimation>
       <div className='w-full min-h-screen flex md:flex-row flex-col-reverse py-10 items-center justify-center space-x-0'>
-        <div className='md:w-1/2 w-full flex items-center justify-center'>
-          <div style={{ animation: 'slideInFromLeft 1s ease-out' }} className='max-w-md w-full rounded-xl shadow-2xl overflow-hidden p-8 space-y-8'>
+        <div className='md:w-1/2 w-full flex items-center  justify-center'>
+          <div style={{ animation: 'slideInFromLeft 1s ease-out' }} className='max-w-md w-full bg-gradient-to-b from-red-700 to-black rounded-xl shadow-2xl overflow-hidden p-8 space-y-8'>
             <h2 style={{ animation: 'appear 2s ease-out' }} className='text-center text-2xl font-bold w-full text-white'>{texth}</h2>
             <p style={{ animation: 'appear 3s ease-out' }} className='text-center text-gray-200'>Sign in to your account</p>
             <form onSubmit={handleSubmit} className='space-y-6'>
@@ -159,17 +159,6 @@ export default function Login(props) {
                 </label>
               </div>
               <div className='flex items-center justify-between'>
-                <label className='flex items-center text-sm text-gray-200'>
-                  <input
-                    onPaste={(event) => {
-                      event.preventDefault();
-                    }}
-                    className='form-checkbox h-4 w-4 text-red-700 bg-gray-800 border-gray-300 rounded'
-                    type='checkbox'
-                  />
-                  <span className='ml-2'>Remember me</span>
-                </label>
-                <a className='text-sm text-red-200 hover:underline' href='#'>Forgot your password?</a>
               </div>
               <button className='w-full py-2 px-4 bg-red-500 hover:bg-red-700 rounded-md shadow-lg text-white font-semibold transition duration-200' type='submit'>
                 Sign In
