@@ -20,7 +20,7 @@ function Nav() {
     return (
         <ScrollAnimation>
             <div className="flex relative flex-col-reverse min-h-screen md:flex-row items-center justify-center">
-                <div className="grp bg-gradient-to-br border w-64 from-red-700 via-black to-white p-5 rounded-2xl shadow-2xl transform transition-all duration-500 ease-in-out hover:shadow-3xl hover:shadow-black hover:scale-105">
+                <div className="grp bg-gradient-to-br border hidden md:flex md:w-64 from-red-700 via-black to-white p-5 rounded-2xl shadow-2xl transform transition-all duration-500 ease-in-out hover:shadow-3xl hover:shadow-black hover:scale-105">
                     <img src={Pngtre} className=" mb-2 w-2/5 rounded-full shadow-lg bg-red-700 transform transition-transform duration-500 ease-in-out hover:shadow-black hover:rotate-6 hover:scale-105" alt="Rose Rouge" />
                     <p className="text-sm font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-white via-red-700 to-white  hover:scale-110 transition-transform duration-300 ease-in-out">
                         WELCOME TO ELITE
